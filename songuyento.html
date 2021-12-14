@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<p id="ketQua"></p>
+<script>
+    let dem = 0;
+    let number = 2;
+    let text = ""
+
+for (number ; dem < 20 ; number++) {
+    let nguyenTo = true;
+    for (let i = 2; i < number; i++) {
+        if (number % i === 0) {
+            nguyenTo = false;
+            break;
+        }
+    }
+    if (nguyenTo) {
+        text += "Số nguyên tố là: " + number + "<br>"
+        dem++
+    }
+
+}
+document.write(text);
+</script>
+</body>
+</html>
